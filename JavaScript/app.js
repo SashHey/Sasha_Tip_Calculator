@@ -35,4 +35,18 @@ const tip = [
     },
 ];
 
-export default App;
+const app = () => {
+    const [tips, selectTips] = useState(tip);
+    const addTipsHandler = (tipsy) => {
+        selectTips((setTips) => {
+            return [expense, ...setTips];
+        });
+    };
+    return (
+        //<div>
+            <></>    
+        //<div/>
+    );
+};
+
+export default app;
