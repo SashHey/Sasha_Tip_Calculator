@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import customTip from './JavaScript/customTip';
 
 const bill = 0;
 const customTip = 0;
@@ -48,5 +49,18 @@ const app = () => {
         //<div/>
     );
 };
+
+const handler = (event) => {
+    const {value: string} = event.target
+    const result = parseFloat(string)
+
+    if (Number.isNaN(result)) return 'error'
+
+    typeof result === number
+}
+
+<input type="number" onChange={event => {event}}>
+    //
+</input>
 
 export default app;
