@@ -1,0 +1,25 @@
+{
+  "short_name": "Tip Calculator",
+  "name": "Sasha's Tip Calculator",
+  "icons": [
+    {
+      "src": "faviconSmile.jpg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "iconGift.jpg",
+      "type": "image/jpg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "iconPerson.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
