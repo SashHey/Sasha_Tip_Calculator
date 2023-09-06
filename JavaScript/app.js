@@ -44,13 +44,11 @@ const app = () => {
         });
     };
     return (
-        //<div>
-            <></>    
-        //<div/>
+        <CustomCalculator/>      
     );
 };
 
-const handler = (event) => {
+const validationHandler = (event) => {
     const {value: string} = event.target
     const result = parseFloat(string)
 
@@ -59,8 +57,6 @@ const handler = (event) => {
     typeof result === number
 }
 
-<input type="number" onChange={event => {event}}>
-    //
-</input>
+<input type="number" onChange={event => {event}}></input>
 
 export default app;
