@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import customTip from './JavaScript/customTip';
 
 const bill = 0;
 const customTip = 0;
@@ -65,18 +64,52 @@ const App = () => {
 
         //come back to
         
-    }
+    };
+
+    const handleValidation = (event) => {
+      const {value: string} = event.target
+      const result = parseFloat(string)
+  
+      if (Number.isNaN(result)) return 'error'
+  
+      typeof result === number
+  };
+  
+  <input type="number" onChange={event => {event}}></input>
 };
 
-const validationHandler = (event) => {
-    const {value: string} = event.target
-    const result = parseFloat(string)
+<div>
+  <h1>Splitter</h1>
+  <div>
+    <h2>Bill</h2>
+    <input type="number"
+    value = {bill}
+    onChange = {handleBill}/>
 
-    if (Number.isNaN(result)) return 'error'
+    <h2>Select Tip %</h2>
+    {buttons}
 
-    typeof result === number
-}
+    <h2>Number of People</h2>
+    <input value = {people}
+    onChange = {handlePeople}/>
+    {people === 0 && (
+      <p>Amount of people cannot be 0</p>
+    )}
+  </div>
+  <div>
+    <h2>Tip Amount / Person</h2>
+    <div>
+      {people === 0
+      ? "..."
+      : tipAmount}
+    </div>
+    <h2>Total / Person</h2>
+    <div>
+      {people === 0
+      ? "..."
+      : tipTotal}
+    </div>
+  </div>
+</div>
 
-<input type="number" onChange={event => {event}}></input>
-
-export default app;
+export default App;
