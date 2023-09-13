@@ -61,9 +61,13 @@ const App = () => {
     };
 
     const handlePeople = (event) => {
+      const {value} = event.target;
+      if (value === "")
+      return setPeople(0);
 
-        //come back to
-        
+      const result = parseInt(value);
+      if (result < 0)
+      return setPeople(result);      
     };
 
     const handleValidation = (event) => {
