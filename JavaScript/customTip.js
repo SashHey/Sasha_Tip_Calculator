@@ -4,7 +4,7 @@ const customTip = (props) => {
     return (
         <div>
             <CustomCalculator className='customCal'>
-                //
+                {/*  */}
             </CustomCalculator>
         </div>
     )
