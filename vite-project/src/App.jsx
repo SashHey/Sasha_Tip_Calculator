@@ -67,7 +67,7 @@ const App = () => {
             key={tipOption.id}
             onClick={() => handleTipClick(tipOption.amount)}
             style={{
-              background: selectedTip === tipOption.amount ? 'blue' : 'pink',
+              background: selectedTip === tipOption.amount ? 'blue' : 'black',
             }}
           >
             {tipOption.title}
