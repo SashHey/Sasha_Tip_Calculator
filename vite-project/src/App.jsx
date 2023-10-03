@@ -1,55 +1,8 @@
 import React, { useState } from 'react';
-
-const TIP_PERCENTAGES = [
-  {
-    id: 'p1',
-    title: '5%',
-    amount: 0.05,
-  },
-  {
-    id: 'p2',
-    title: '10%',
-    amount: 0.1,
-  },
-  {
-    id: 'p3',
-    title: '15%',
-    amount: 0.15,
-  },
-  {
-    id: 'p4',
-    title: '25%',
-    amount: 0.25,
-  },
-  {
-    id: 'p5',
-    title: '50%',
-    amount: 0.5,
-  },
-];
+import Components from './Components';
 
 const App = () => {
-  const [bill, setBill] = useState(0);
-  const [selectedTip, setSelectedTip] = useState(0.1);
-  const [people, setPeople] = useState(1);
-
-  const handleTipClick = (tipAmount) => {
-    setSelectedTip(tipAmount);
-  };
-
-  const handleBillChange = (event) => {
-    const { value } = event.target;
-    setBill(value === '' ? 0 : parseFloat(value));
-  };
-
-  const handlePeopleChange = (event) => {
-    const { value } = event.target;
-    setPeople(value === '' ? 0 : parseInt(value));
-  };
-
-  const tipAmount = (bill * selectedTip) / people || 0;
-  const totalPerPerson = (bill + bill * selectedTip) / people || 0;
-
+  <Components></Components>
   return (
     <div>
       <h1>Splitter</h1>
@@ -90,6 +43,6 @@ const App = () => {
       </div>
     </div>
   );
-};
-
+}
+  
 export default App;
